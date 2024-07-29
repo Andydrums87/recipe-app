@@ -79,6 +79,12 @@ ul img {
 }
 
 @media (max-width:450px) {
+    h1 {
+        margin-left: 20px;
+    }
+    ul {
+        margin-left:0px;
+    }
     ul button {
         width:190px;
     }
