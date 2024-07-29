@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "./Sidebar.module.css"
+import './sidebar.css'
 
 function Sidebar({category, selectedCategory, stateChanger, handleData}) {
 

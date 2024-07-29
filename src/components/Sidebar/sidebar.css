@@ -1,10 +1,7 @@
 .sidebar {
+    margin-right:15px;
+    width:100%;
    
-    margin-right:20px;
-
-    
-    
-    
 }
 
 h1 {
@@ -13,18 +10,16 @@ h1 {
     font-size: 1.7rem;
     font-weight: 500;
     margin-bottom: 40px;;
- 
 }
 
 ul {
+    margin-left: 20px;;
     display: flex;;
     flex-direction: column;
     gap: 10px;;
     list-style-type: none;
-   
-
-  
-  
+    
+    
 }
 
 
@@ -56,32 +51,28 @@ ul img {
 
 
 
-@media (max-width:640px) {
-    .sidebar {
-      
-     
-        width:100%;
-    }
+@media (max-width:600px) {
+    /* .sidebar {
+        width:100vw;
+    } */
 
     h1 {
         
         margin-left: 10px;
     }
+    
+
     ul {
-        flex-direction: row;
-        width:100%;
-        gap:10px;
-        flex-wrap: wrap;
-        padding:0px;
-        justify-content: center;
-        
+
+
+       flex-direction: row;
+       justify-content: center;
+       flex-wrap: wrap;
+       
     }
-
     
     
-    ul button {
-        width:500px;
-    
-
+    ul button{
+        width:240px;
     }
 }
