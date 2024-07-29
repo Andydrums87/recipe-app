@@ -52,9 +52,10 @@ ul img {
 
 
 @media (max-width:600px) {
-    /* .sidebar {
+    .sidebar {
+        margin-top: 80px;
         width:100vw;
-    } */
+    }
 
     h1 {
         
@@ -64,15 +65,21 @@ ul img {
 
     ul {
 
-
        flex-direction: row;
        justify-content: center;
        flex-wrap: wrap;
+     
        
     }
     
     
     ul button{
         width:240px;
+    }
+}
+
+@media (max-width:450px) {
+    ul button {
+        width:190px;
     }
 }

@@ -53,6 +53,15 @@ body {
   }
 }
 
+@media (max-width:750px) {
+
+ 
+  .hero__text {
+width: 300px
+
+  }
+}
+
 @media (max-width:640px) {
   /* .container {
     width:100%;;
@@ -66,7 +75,19 @@ body {
   }
 
   .hero__text {
-    height:40%;
+    width:250px;
+  }
+
+
+}
+
+@media (max-width:450px) {
+
+  .header__overlay {
+    top:50%;
+  }
+  .hero__text {
+    width:200px;
   }
 }
 
@@ -97,6 +118,8 @@ width:70vw;
 
   width:96%;
 }
+
+
 
 
 input {
@@ -150,6 +173,8 @@ select {
   margin-right:20px;
 
 }
+
+
 
 
 
@@ -237,6 +262,21 @@ width:100vw;
 }
   .card {
     width:85%;
+  }
+
+}
+
+@media (max-width:450px) {
+  .filter__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    
+  }
+
+  select {
+    width:50%;
   }
 
 }
