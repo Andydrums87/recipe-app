@@ -1,0 +1,24 @@
+.pagination {
+    width:100%;
+}
+#my__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+  
+  .pagination button {
+    width:100px;
+    background-color: transparent;
+    color: white;
+
+    
+  }
+  
+  .page__item {
+    border: none;
+  }
+  
+  .active {
+    border: 1px solid yellow;
+  }

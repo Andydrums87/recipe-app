@@ -4,9 +4,12 @@ import Sidebar from '../components/Sidebar/Sidebar'
 import Search from "../components/Search/Search"
 import OrderBy from '../components/Sort/OrderBy'
 import Card from '../components/Card/Card'
+import Pagination from '../components/Pagination'
+import Pagination2 from '../components/Pagination/Pagination2'
 
 
-const Home = () => {
+
+function Home () {
   const [data, setData] = useState([]);
   const [category, setCategory] = useState([])
   const [selectedCategory, setSelectedCategory] = useState("Dessert")
@@ -14,6 +17,14 @@ const Home = () => {
   const [userInput, setUserInput] = useState("")
   const [sortData, setSortData] = useState("name")
   const [selectValue, setSelectValue] = useState("name")
+  const [currentPage, setCurrentPage] = useState(1)
+  const [recordsPerPage, setRecordsPerPage] = useState(9)
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage
+
+  const nPage = Math.ceil(data.length / recordsPerPage)
+  const numbers = [...Array(nPage + 1).keys()].slice(1)
+
 
 
 
@@ -24,7 +35,7 @@ const Home = () => {
       })
       .then((category) => {
         console.log(category)
-        setCategory(category.categories.slice(0, 6))
+        setCategory(category.categories)
       });
   }, []);
 
@@ -34,8 +45,7 @@ const Home = () => {
         return res.json()
       })
       .then((data) => {
-       setData(data.meals.slice(0, 6))
-     
+        setData(data.meals)
       });
   }, []);
 
@@ -62,9 +72,7 @@ useEffect(() => {
     .then((res) => res.json())
     .then((data) => {
      
-        setData(data.meals.slice(0, 12));
-        // setSortData(data.meals.slice(0, 12))
-
+        setData(data.meals.slice(0, 100));
         setLoading(false);
        
     });
@@ -77,21 +85,21 @@ useEffect(() => {
       fetch(url1)
       .then((res) => res.json())
       .then((data) => {
-          setData(data.meals.slice(0, 12));
+          setData(data.meals.slice(0, 100));
           setLoading(false);
       });
       let url2 = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${userInput}`;
       fetch(url2)
       .then((res) => res.json())
       .then((data) => {
-          setData(data.meals.slice(0, 12));
+          setData(data.meals.slice(0, 100));
           setLoading(false);
       });
       let url3 = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${userInput}`;
       fetch(url3)
       .then((res) => res.json())
       .then((data) => {
-          setData(data.meals.slice(0, 12));
+          setData(data.meals.slice(0, 100));
           setLoading(false);
       });
     
@@ -106,6 +114,24 @@ useEffect(() => {
     const sortId = [...id].sort((a, b) => a.idMeal - b.idMeal)
     sortData === "id" ? setData(sortId) : setData(sortName)
   }
+
+
+  const goToNextPage = () => {
+    if(currentPage !== nPage) 
+        setCurrentPage(currentPage + 1)
+
+      
+
+}
+
+const goToPrevPage = () => {
+    if(currentPage !== 1) 
+        setCurrentPage(currentPage -1)
+}
+
+
+
+
  
 
 return (
@@ -120,8 +146,10 @@ return (
         <Search setUserInput={setUserInput} handleSearch={handleSearch} />
         <OrderBy data={data} handleSelect={handleSelect} setSelectValue={setSelectValue}selectValue={selectValue} />
         </div>
-         <Card data={data}/> 
-
+         <Card data={data} firstIndex={firstIndex} lastIndex={lastIndex}/> 
+         
+        <Pagination2 numbers={numbers}goToNextPage={goToNextPage} goToPrevPage={goToPrevPage} nPage={nPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+       
       </div>
     </div>
  </div>

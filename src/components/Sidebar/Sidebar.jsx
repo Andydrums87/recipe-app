@@ -20,7 +20,7 @@ function Sidebar({category, selectedCategory, handleData}) {
             <h1>Categories</h1>
             
                
-                    <ul>
+                    <ul className="list">
                     {category.map((item, index) => {
                         return (
                             <li key={index}>

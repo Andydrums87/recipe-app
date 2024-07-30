@@ -46,7 +46,7 @@ return (
     {Object.keys(recipe).map( 
         key => {
             if(key.startsWith('strIngredient') && recipe[key]) {
-                return <li>{recipe[key]}</li>
+                return <li key={key}>{recipe[key]}</li>
             }
            
         }

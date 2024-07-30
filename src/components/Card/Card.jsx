@@ -5,11 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function Card({data}) {
+function Card({data, firstIndex, lastIndex}) {
+
+    const records = data.slice(firstIndex, lastIndex)
 
     const [clickedRecipe, setClickedRecipe] = useState()
 
     const navigate = useNavigate();
+
+    
 
 
     const showRecipe = (clickedRecipe) => {
@@ -23,10 +27,9 @@ function Card({data}) {
                     navigate('/recipe', {state: {detailRecipe: data.meals[0]}})
                 })
     }
-    
     return (
         <div className="card__container">
-            {data.map((item, index) => {
+            {records.map((item, index) => {
                 return (
                 <div className="card" key={index} onClick={(e) => {showRecipe(item.idMeal); setClickedRecipe(item.idMeal)}}>
                              <img className="card__img" src={item.strMealThumb} alt="" />
