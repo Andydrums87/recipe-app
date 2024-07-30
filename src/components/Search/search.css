@@ -12,7 +12,7 @@
     border: 2px solid #394150;
     color:#E5E7EB;
     padding-left: 60px;
-    background-image: url(./src/images/Search.svg);
+    background-image: url(/src/images/Search.svg);
     background-repeat: no-repeat;
     background-position: 5% 45%;
   

@@ -12,7 +12,7 @@ select {
     color: #0E1325;
     padding-left: 20px;
     font-size: 1rem;
-    background-image: url(./src/images/Expand_down.svg);
+    background-image: url(/src/images/Expand_down.svg);
     background-repeat: no-repeat;
     background-position: 90% 50%;;
     margin-right:20px;
