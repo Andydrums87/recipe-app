@@ -13,8 +13,6 @@ function Sidebar({category, handleData, setCurrentPage}) {
         setCurrentPage(1)
     }
 
-   
-    
 
     return (
         <div className="sidebar">

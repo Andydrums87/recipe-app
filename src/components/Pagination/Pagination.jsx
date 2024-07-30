@@ -30,4 +30,4 @@ function Pagination({numbers,goToNextPage, goToPrevPage, nPage, setCurrentPage, 
     )
 }
 
-export default Pagination2;
+export default Pagination;

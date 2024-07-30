@@ -4,8 +4,7 @@ import Sidebar from '../components/Sidebar/Sidebar'
 import Search from "../components/Search/Search"
 import OrderBy from '../components/Sort/OrderBy'
 import Card from '../components/Card/Card'
-import Pagination from '../components/Pagination'
-import Pagination2 from '../components/Pagination/Pagination'
+import Pagination from '../components/Pagination/Pagination'
 
 
 
@@ -148,7 +147,7 @@ return (
         </div>
          <Card data={data} firstIndex={firstIndex} lastIndex={lastIndex}/> 
          
-        <Pagination2 numbers={numbers}goToNextPage={goToNextPage} goToPrevPage={goToPrevPage} nPage={nPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+        <Pagination numbers={numbers}goToNextPage={goToNextPage} goToPrevPage={goToPrevPage} nPage={nPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
        
       </div>
     </div>
