@@ -76,7 +76,17 @@ ul img {
     padding: 0px;
  
    }
+
+   ul img {
+    left:-10%;
+   }
 } 
+
+@media (max-width:450px) {
+    ul img {
+        left:-15%;
+    }
+}
 
 
 

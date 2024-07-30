@@ -34,3 +34,9 @@
         width:400px;
       }
   }
+
+  @media (max-width: 450px) {
+    input {
+      width:280px;
+    }
+  }
