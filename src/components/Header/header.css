@@ -1,7 +1,9 @@
 
 .header__container {
    
-    width:100%;
+    width:98%;
+ 
+    margin:0 auto;
     height:400px;
     
     /* padding:15px; */
@@ -10,8 +12,9 @@
     background-image: url(/src/images/hero-imagehc.jpg);
     background-position: fixed;
     background-size: cover;
+
     background-position: center center;
-    border-radius: 20px;;
+    border-radius: 25px;;
     overflow: hidden;
    
    
@@ -45,10 +48,7 @@
   }
   
   @media (max-width:1024px) {
-    .header__container {
-      width:100%;
-     
-    }
+  
     .hero__text {
         left:50%;
     }
@@ -58,12 +58,13 @@
   @media (max-width:650px) {
     .header__container {
         background-position: 30% 50%;;
+        width:95%;
     }
     .hero__text {
         width:50%;
         height:45%;
         top:15%;
-        left:50%;
+        left:45%;
       
 
     }

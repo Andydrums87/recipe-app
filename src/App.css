@@ -15,6 +15,7 @@ body {
 
 .container {
   width:100vw;
+  margin-top: 12px;
 }
 
 .body__wrapper {
