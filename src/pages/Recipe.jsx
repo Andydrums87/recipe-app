@@ -30,13 +30,18 @@ return (
         <img src={Logo} alt="" />
         <button className="return__btn" onClick={handleClick}>Back To Categories</button>
     </nav>
-    <div className="content">
+<div className="content">
     <img src={recipe.strMealThumb} alt="" />
+    <div className="info">
     <h1 className="recipe__title">{recipe.strMeal}</h1>
-   
-    <span className="type">Category: {recipe.strCategory}</span>
+   <div className="span__container">
+     <span className="type">Category: {recipe.strCategory}</span>
     <span className="type">Area: {recipe.strArea}</span>
-<ul className="ingredient__list">
+   </div>
+    </div>
+
+   
+ <ul className="ingredient__list">
     <p className="ingredients"><span id="yellow">0</span>Ingredients</p>
     {Object.keys(recipe).map( 
         key => {
@@ -46,9 +51,9 @@ return (
            
         }
     )}
-</ul>
-<p className="instructions"><span id="blue">0</span>{recipe.strInstructions}</p>
-</div>
+   </ul>
+    <p className="instructions"><span id="blue">0</span>{recipe.strInstructions}</p>
+ </div>
 
    
 </div>

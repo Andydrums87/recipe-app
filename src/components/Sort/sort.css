@@ -20,13 +20,18 @@ select {
   }
 
   @media (max-width: 640px) {
-    select {
-        width:30%;
-      }
-  }
 
-  /* @media (max-width:450px) {
+  
     select {
-        width:50%;
+      margin-top: 20px;
+        width:40%;
       }
-  } */
+  } 
+
+  @media (max-width:450px) {
+    select {
+      
+        width:40%;
+        
+      }
+  } 

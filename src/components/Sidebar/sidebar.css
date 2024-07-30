@@ -12,9 +12,10 @@ body {
 h1 {
    margin-left: 10px;
     color:#E5E7EB;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 40px;;
+    font-family: "Playfair Display", sans-serif;
 }
 
 ul {
@@ -50,13 +51,13 @@ ul img {
     
     
 }
-
-@media (max-width:650px) {
+ @media (max-width:650px) {
   
 .sidebar {
+    width:100vw;
     margin-bottom: 30px;
     margin-left: 0px;;
-    padding-left:0rem;
+    padding:0px;
     
 }
    h1 {
@@ -66,17 +67,21 @@ ul img {
    ul {
     flex-direction: row;
     flex-wrap: wrap;
+    padding:0px;
+ 
    }
 
-   ul button {
-    width:300px;
+   ul li {
+    width:48%;
+    padding: 0px;
+ 
    }
-}
-
+} 
 
 
 
 /* 
+
 
 @media (max-width:640px) {
     .sidebar {
@@ -113,4 +118,4 @@ ul img {
     ul button {
         width:190px;
     }
-} */
+} */ 

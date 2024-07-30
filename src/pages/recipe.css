@@ -1,14 +1,15 @@
 body {
     color: #E5E7EB;;
-    width:1280px;
-    width:100%;
-    margin:0 auto;
-  
+    height:100vh;
 }
 
 .container {
-  
-    white-space: pre-line;
+    width:1280px;
+    /* white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
 }
 
 
@@ -17,10 +18,9 @@ nav {
     width:100%;
     display: flex;
     justify-content: space-between;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    padding:1rem;
+    margin-bottom: 20px;
+   
  
 }
 
@@ -29,59 +29,72 @@ nav {
     background-color: 
     #E5E7EB;
     border: none;
-    padding:15px 40px;
+    padding:15px 30px;
    font-weight: 550;
     font-size: 1rem;
-    background-image: url(./images/Expand_left.svg);
+    background-image: url(src//images/Expand_left.svg);
     background-repeat: no-repeat;
     background-position: 5% 50%;;
     cursor: pointer;
 }
 
 .content {
-   width:50%;
 
+width:500px;
+margin:0 auto;
  
-   text-align: start;
-   
-
 }
 
 .content img {
   
-    width:550px;
-    height:400px;
+    width:100%;
+    height:350px;
     border-radius: 20px;;
+    
 }
+
+
 
 .recipe__title {
     font-size: 3rem;
     padding:0px;
     margin-left:0px;
-    margin-bottom:20px;
+
+ 
     
 }
+
+.span__container {
+    margin-bottom: 40px;;
+}
+
 
 .type {
     background-color: #394150;
     padding:10px 30px;
     border-radius: 25px;
     margin-right: 10px;
+    margin-bottom: 20px;;
 }
 
 
 
 .ingredients {
+    margin-top: 20px;;
     font-weight: bold;
     font-size:1.2rem;
+    margin-bottom: 20px;;
+    
+
    
    
 }
 
 .ingredient__list {
+
     list-style-type:disc;
-    padding-left:10px;
-    margin-bottom: 40px;
+    margin-bottom: 40px;;
+
 }
 
 #yellow {
@@ -97,17 +110,22 @@ nav {
     color:#4E80EE;
     border-radius: 25px;;
     margin-right: 20px;;
+   
 }
 
 .instructions {
     line-height: 30px;
+    margin-bottom: 40px;;
+  
 }
 
-@media (max-width:640px) {
-    .container {
-        width:640px;
-    }
-    .content {
-        width:100%;
-    }
+@media (max-width:700px) {
+  .content {
+    width:400px;
+  }
+
+  .ingredient__list {
+    display: block;
+    line-height: 2.5rem;
+  }
 }
