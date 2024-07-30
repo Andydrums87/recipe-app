@@ -1,0 +1,30 @@
+.search__bar {
+    width:50%;
+  }
+
+  input {
+    /* width: 320px;; */
+    width:100%;
+    height:50px;
+    background-color: transparent;
+    border-radius: 25px;;
+    /* padding: 15px 30px;; */
+    border: 2px solid #394150;
+    color:#E5E7EB;
+    padding-left: 60px;
+    background-image: url(./src/images/Search.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 45%;
+  
+  }
+
+  input::-webkit-input-placeholder {
+    color: #394150;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    input {
+        width:350px;
+      }
+  }

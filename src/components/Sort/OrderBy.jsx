@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import ExpandDown from "../images/Expand_down.svg"
+import "./sort.css"
+// import ExpandDown from "../images/Expand_down.svg"
+
 
 function OrderBy ({data, sortData, handleSelect, setSelectValue, selectValue}) {
 

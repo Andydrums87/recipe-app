@@ -19,7 +19,7 @@ function Sidebar({category, selectedCategory, stateChanger, handleData}) {
         <div className="sidebar">
             <h1>Categories</h1>
             
-                <div className="ul">
+               
                     <ul>
                     {category.map((item, index) => {
                         return (
@@ -39,7 +39,7 @@ function Sidebar({category, selectedCategory, stateChanger, handleData}) {
                
             })}
              </ul>
-             </div>
+            
         </div>
         // style={{width: "85%", padding:"20px"}}
         // 

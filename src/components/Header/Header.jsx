@@ -1,6 +1,7 @@
 import React from "react";
-import Hero from "../images/hero-imagehc.jpg"
-import HeroText from "../images/hero-text.svg"
+import "./header.css"
+import Hero from "/src/images/hero-imagehc.jpg"
+import HeroText from "/src/images/hero-text.svg"
 
 function Header() {
     return (

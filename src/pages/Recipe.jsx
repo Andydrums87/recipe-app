@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './recipe.css'
-import Logo from "../images/logo-light.svg"
+import Logo from "/src/images/logo-light.svg"
 import {  useLocation  } from 'react-router-dom'
 import { useNavigate  } from 'react-router-dom'
 

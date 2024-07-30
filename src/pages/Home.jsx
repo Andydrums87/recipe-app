@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import Header from '../components/Header'
+import Header from '../components/Header/Header'
 import Sidebar from '../components/Sidebar/Sidebar'
-import Search from "../components/Search"
-import OrderBy from '../components/OrderBy'
-import Card from '../components/Card'
+import Search from "../components/Search/Search"
+import OrderBy from '../components/Sort/OrderBy'
+import Card from '../components/Card/Card'
 
 
 const Home = () => {
