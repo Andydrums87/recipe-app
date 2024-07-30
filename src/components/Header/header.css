@@ -38,9 +38,9 @@
   /* } */
   .hero__text {
     position: absolute;
-    top:5%;
+    top:15%;
     left:50%;
-    height:60%;
+    height:40%;
    
   }
   
@@ -50,7 +50,7 @@
      
     }
     .hero__text {
-        left:35%;
+        left:50%;
     }
     
   }

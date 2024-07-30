@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import './sidebar.css'
 
-function Sidebar({category, selectedCategory, stateChanger, handleData}) {
+function Sidebar({category, selectedCategory, handleData}) {
 
 
-    const [selectedItem, setSelectedItem] = useState(category[2])
+    const [selectedItem, setSelectedItem] = useState(null)
 
-  
+
     const handleInput = (item, index) => {
         console.log()
         setSelectedItem(item)
