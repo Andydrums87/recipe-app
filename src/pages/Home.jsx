@@ -5,7 +5,7 @@ import Search from "../components/Search/Search"
 import OrderBy from '../components/Sort/OrderBy'
 import Card from '../components/Card/Card'
 import Pagination from '../components/Pagination'
-import Pagination2 from '../components/Pagination/Pagination2'
+import Pagination2 from '../components/Pagination/Pagination'
 
 
 
@@ -139,7 +139,7 @@ return (
     <Header />
     <div className="body__wrapper">
       <div className="body__left">
-      <Sidebar category={category} handleData={handleData} selectedCategory={selectedCategory} />
+      <Sidebar category={category} handleData={handleData} selectedCategory={selectedCategory} setCurrentPage={setCurrentPage} currentPage={currentPage} />
       </div>
       <div className="body__right">
         <div className="filter__container">

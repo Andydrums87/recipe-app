@@ -1,28 +1,27 @@
 import React from "react";
 import './pagination.css'
 
-function Pagination2({numbers,goToNextPage, goToPrevPage, nPage, setCurrentPage, currentPage}) {
+function Pagination({numbers,goToNextPage, goToPrevPage, nPage, setCurrentPage, currentPage}) {
     return (
         <ul id="my__list" className="pagination">
-            <li className = {`page__item ${currentPage === nPage ? 'active' : ''}`}>
+            <li>
                 <button 
                 onClick={goToPrevPage}>
-                    Previous
+                   <i class="fa-solid fa-chevron-left"></i>
                 </button>
             </li>
             {numbers.map((n, i) => {
                 return (
                     <li key={i}>
-                        <button onClick={()=>setCurrentPage(n)}>
-    
+                        <button className={currentPage -1 === i  ? 'active' : ''} onClick={()=>setCurrentPage(n)}>
                               {n}
                         </button>
                     </li>
                 )
             })}
-            <li className ={`page__item ${currentPage === nPage ? 'active' : ''}`}>
+            <li >
                 <button  onClick={goToNextPage}>
-                    Next
+                <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </li>
         </ul>

@@ -2,15 +2,19 @@
     width:100%;
 }
 #my__list {
+
     display: flex;
     flex-wrap: wrap;
+
 }
   
   
   .pagination button {
-    width:100px;
+    width:50px;
+    height:50px;
     background-color: transparent;
     color: white;
+    cursor: pointer;
 
     
   }
@@ -20,5 +24,6 @@
   }
   
   .active {
-    border: 1px solid yellow;
+    border: 3px solid #FEBD2E;
+  
   }

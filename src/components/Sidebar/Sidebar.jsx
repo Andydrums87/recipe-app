@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import './sidebar.css'
 
-function Sidebar({category, selectedCategory, handleData}) {
+function Sidebar({category, handleData, setCurrentPage}) {
 
 
-    const [selectedItem, setSelectedItem] = useState(null)
+    const [selectedItem, setSelectedItem] = useState()
 
 
     const handleInput = (item, index) => {
         console.log()
         setSelectedItem(item)
+        setCurrentPage(1)
     }
 
    
